@@ -1,0 +1,69 @@
+﻿@model WebApplication1.Models.EmployeeDetailsViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 class="text-center">Employee</h1>
+
+
+<div class="container">
+	<div class="row m-2">
+		<div class="col-lg-6 py-1">
+			<div class="input-group default-input-group ">
+				<input type="text" class="form-control allownumericwithoutdecimal" id="employeeCode" placeholder="Enter Employee Code">
+				<span class="input-group-btn">
+					<button class="btn btn-info" onclick="redirectToEmployee()">Show Salary With Bonus</button>
+				</span>
+			</div>
+		</div>
+		<div class="col-lg-6 py-1">
+			<div class="d-flex justify-content-end gap-1">
+				<button class="btn btn-primary" onclick="highlightName(2)">Highlight Name</button>
+				<button class="btn btn-success" onclick="highlightSalary(2)">Highlight Salary</button>
+			</div>
+		</div>
+	</div>
+		<table class="table table-bordered"  id="employeeTable2">
+		<thead>
+			<tr>			
+				<th>
+					@Html.DisplayNameFor(model => model.Id)
+				</th><th>
+					@Html.DisplayNameFor(model => model.Name)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Salary)
+				</th>	<th>
+					@Html.DisplayNameFor(model => model.SalaryWithBonus)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.JoinDate)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Position)
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			@* @{
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem => Model.EmployeeCode)
+					</td><td>
+						@Html.DisplayFor(modelItem => Model.Name)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => Model.Salary)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => Model.JoinDate)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => Model.Position.Name)
+					</td>
+				</tr>
+			} *@
+		</tbody>
+	</table>
+</div>
+
+
